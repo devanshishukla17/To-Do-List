@@ -1,37 +1,39 @@
-// import React from 'react';
-// import './ToDo.css'; 
-
-// export default function ToDo()
-// {
-//     return 
-//     (
-//         <div className="todo-container">
-//           {/* Your To-Do component content goes here */}
-//           <h1>Welcome to the Task Manager</h1>
-//           <p>Manage your tasks efficiently!</p>
-//         </div>
-//     );
-// }
-
 import React from 'react';
+import './ToDo.css';
 
-const ToDo = () => {
-  const backgroundStyle = {
-    backgroundImage: `url(${process.env.PUBLIC_URL + './assets/bg.jpg'})`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    backgroundRepeat: 'no-repeat',
-    height: '100vh',
-    width: '100vw',
-  };
+const CategoryPage = () => {
+  const categories = [
+    { name: 'College Study', icon: '🎓', color: '#F28B82' },
+    { name: 'Personal Study', icon: '📖', color: '#FBBC05' },
+    { name: 'Health Goals', icon: '💪', color: '#34A853' },
+    { name: 'Miscellaneous', icon: '✨', color: '#4285F4' },
+  ];
 
   return (
-    <div style={backgroundStyle}>
-      <h1>Welcome to the Task Manager</h1>
-      <p>Manage your tasks efficiently!</p>
+    <div className="container">
+      {/* Header */}
+      <header className="header">
+        <div className="logo">🪶 Discover</div>
+        <div className="auth-buttons">
+          <button>Sign in</button>
+          <button>Sign up</button>
+        </div>
+      </header>
+
+      {/* Main Content */}
+      <main>
+        <h1 className="page-title">JUST DO IT</h1>
+        <div className="grid-container">
+          {categories.map((category, index) => (
+            <div key={index} className="grid-item" style={{ backgroundColor: category.color }}>
+              <div className="category-icon">{category.icon}</div>
+              <div className="category-name">{category.name}</div>
+            </div>
+          ))}
+        </div>
+      </main>
     </div>
   );
 };
 
-export default ToDo;
-
+export default CategoryPage;

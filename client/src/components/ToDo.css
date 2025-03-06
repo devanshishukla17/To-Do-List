@@ -1,8 +1,95 @@
-  h1 {
-    font-size: 3rem;
-  }
-  
-  p {
-    font-size: 1.5rem;
-  }
-  
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header Styles */
+.header {
+  background-color: #fbbd08;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.auth-buttons button {
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  margin-left: 16px;
+  cursor: pointer;
+}
+
+.auth-buttons button:hover {
+  color: #007bff;
+}
+
+/* Main Content Styles */
+.page-title {
+  text-align: center;
+  margin: 32px 0;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 50px; /* Adjusted grid gap */
+  padding: 0 40px;
+  height: 70vh;
+}
+
+/* Grid Item Styling */
+.grid-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  transition: transform 0.3s ease; /* Add transition for smooth effect */
+}
+
+/* Hover effect to make blocks bulge */
+.grid-item:hover {
+  transform: scale(1.05); /* Slight bulging effect */
+}
+
+/* Add margin below the first row of grid items */
+.grid-item:nth-child(1), .grid-item:nth-child(2) {
+  margin-bottom: 30px; /* Gap between the rows */
+}
+
+.category-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.category-name {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* Ensure all blocks have equal size */
+.grid-container > .grid-item {
+  height: 100%;
+}

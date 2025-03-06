@@ -1,10 +1,9 @@
 import React from 'react';
-import ToDo from './components/ToDo'; // Adjust the path based on where your ToDo.js file is located
-
+import CategoryPage from './components/ToDo'; 
 function App() {
   return (
     <div className="App">
-      <ToDo/>
+      <CategoryPage/>
     </div>
   );
 }
