@@ -1,0 +1,177 @@
+/* General Styles */
+:root {
+    --primary-yellow: #f7e143;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --text-dark: #333;
+    --text-light: #666;
+    --white: #fff;
+    --background-cream: #f9f6e5;
+  }
+  
+  body {
+    font-family: 'Segoe UI', 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-cream);
+  }
+  
+  /* Homepage Container */
+  .homepage-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  /* Tabs Container */
+  .tabs-container {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    justify-content: space-around;
+    position: relative;
+    gap: 30px;
+  }
+  
+  /* Card Styles */
+  .card {
+    background-color: var(--white);
+    border-radius: 25px;
+    box-shadow: 0 4px 15px var(--shadow-color);
+    width: 330px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .card-content {
+    padding: 40px 25px 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 450px;
+  }
+  
+  .yellow-background {
+    background-color: var(--primary-yellow);
+  }
+  
+  /* Headings and Text */
+  h2 {
+    font-size: 26px;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: 600;
+  }
+  
+  p {
+    color: var(--text-light);
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 16px;
+  }
+  
+  /* Illustration */
+  .illustration {
+    width: 100%;
+    margin: 15px 0 30px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .desk-image {
+    width: 85%;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
+  /* Buttons */
+  .primary-button, .secondary-button, .google-button {
+    width: 100%;
+    padding: 14px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 500;
+    margin-bottom: 15px;
+    transition: all 0.2s ease;
+  }
+  
+  .primary-button {
+    background-color: var(--primary-yellow);
+    color: var(--text-dark);
+  }
+  
+  .secondary-button {
+    background-color: transparent;
+    border: 1px solid #ddd;
+    color: var(--text-dark);
+  }
+  
+  .google-button {
+    background-color: var(--white);
+    color: var(--text-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 1px 3px var(--shadow-color);
+    margin-top: 20px;
+  }
+  
+  .google-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+  
+  /* Tab Indicators */
+  .tab-indicator {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #ccc;
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+  
+  .splash-indicator {
+    background-color: var(--primary-yellow);
+  }
+  
+  /* Links */
+  a {
+    color: var(--text-dark);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  .login-prompt {
+    margin-top: 25px;
+    font-size: 15px;
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media screen and (max-width: 1100px) {
+    .tabs-container {
+      flex-direction: column;
+      align-items: center;
+      gap: 50px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .card {
+      width: 100%;
+      max-width: 300px;
+    }
+    
+    .card-content {
+      padding: 30px 20px 50px;
+      min-height: 400px;
+    }
+  }

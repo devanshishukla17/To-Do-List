@@ -1,9 +1,9 @@
 import React from 'react';
-import CategoryPage from './components/ToDo'; 
+import Home from './components/home'; 
 function App() {
   return (
     <div className="App">
-      <CategoryPage/>
+      <Home/>
     </div>
   );
 }

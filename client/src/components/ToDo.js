@@ -22,7 +22,7 @@ const CategoryPage = () => {
 
       {/* Main Content */}
       <main>
-        <h1 className="page-title">JUST DO IT</h1>
+        <h1 className="page-title">TODOY</h1>
         <div className="grid-container">
           {categories.map((category, index) => (
             <div key={index} className="grid-item" style={{ backgroundColor: category.color }}>
